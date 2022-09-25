@@ -121,7 +121,7 @@ async def error_handler(interaction: Interaction, error):
         return
     elif isinstance(error, app_commands.errors.CommandInvokeError):
         await interaction.response.send_message(
-            "Duration can't be more than 28 days \nYou cannot timeout yourself \nPassing in no inputs will result in a 0 second timeout.",
+            "**Error 404:** The duration can't be more than 28 days, you cannot timeout yourself and passing in no inputs will result in a 0 second timeout.",
             ephemeral=True)
         return
     else:
