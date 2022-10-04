@@ -116,7 +116,7 @@ async def untimeout(interaction: Interaction, user: Member,
 async def error_handler(interaction: Interaction, error):
     if isinstance(error, app_commands.errors.MissingPermissions):
         await interaction.response.send_message(
-            "You need to have adminstrator permissions to use this command.",
+            "You need to have adminstrator permissions to use this command!",
             ephemeral=True)
         return
     elif isinstance(error, app_commands.errors.CommandInvokeError):
