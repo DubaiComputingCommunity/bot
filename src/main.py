@@ -34,7 +34,7 @@ async def on_message(msg):
             return
 
 
-@bot.tree.command(name="kick", description="Kicks a user.")
+@bot.tree.command(name="kick", description="Kicks a user")
 @app_commands.checks.has_permissions(administrator=True)
 async def kick(interaction: Interaction, user: Member,
                reason: typing.Union[str, None]):
@@ -48,7 +48,7 @@ async def kick(interaction: Interaction, user: Member,
                                                 ephemeral=True)
 
 
-@bot.tree.command(name="ban", description="Bans a user.")
+@bot.tree.command(name="ban", description="Bans a user")
 @app_commands.checks.has_permissions(administrator=True)
 async def ban(interaction: Interaction, user: Member,
               reason: typing.Union[str, None]):
@@ -63,7 +63,7 @@ async def ban(interaction: Interaction, user: Member,
 
 
 @bot.tree.command(name="timeout",
-                  description="Times out a user (max 28 days).")
+                  description="Times out a user (max 28 days)")
 @app_commands.checks.has_permissions(administrator=True)
 async def timeout(interaction: Interaction,
                   user: Member,
@@ -93,7 +93,7 @@ async def timeout(interaction: Interaction,
     return
 
 
-@bot.tree.command(name="untimeout", description="Removes a user's timeout.")
+@bot.tree.command(name="untimeout", description="Removes a user's timeout")
 @app_commands.checks.has_permissions(administrator=True)
 async def untimeout(interaction: Interaction, user: Member,
                     reason: typing.Union[str, None]):
