@@ -121,7 +121,7 @@ async def error_handler(interaction: Interaction, error):
         return
     elif isinstance(error, app_commands.errors.CommandInvokeError):
         await interaction.response.send_message(
-            "**Error:** Make sure roles are set up properly, the duration for a timeout can't be more than 28 days, you cannot timeout yourself and putting in no inputs will result in a 0 second timeout.",
+            "**Error:** Make sure roles are set up properly, the duration for a timeout can't be more than 28 days, you cannot timeout yourself and putting in no inputs for a timeout will result in a 0 second timeout.",
             ephemeral=True)
         return
     else:
